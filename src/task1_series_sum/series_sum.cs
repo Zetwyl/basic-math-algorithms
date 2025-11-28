@@ -1,12 +1,11 @@
 ﻿namespace task1_series_sum
 {
-    internal class Program
+    public static class series_sum
     {
-        static void Main(string[] args)
+        public static List<int> SeriesSum(int p)
         {
             int series = 1;
             int seriesSum = 0;
-            int p = 15;
             List<int> numbers = new List<int>();
 
             while (p >= seriesSum)
@@ -16,8 +15,8 @@
                 series++;
             }
 
-            string numbersStr = string.Join($", ", numbers);
-            Console.WriteLine($"Num: {numbersStr}");
+            return numbers;
+
         }
     }
 }

@@ -1,10 +1,12 @@
 ﻿namespace task3_squares_sum
 {
-    internal class Program
+    public static class squares_sum
     {
-        static void Main(string[] args)
+        public static List<int> GetSquaresSum(int a)
         {
-            int a = 111;
+            if (a < 0)
+                throw new ArgumentException("a должно быть неотрицательным");
+
             int squaresSum = 0;
             int currentNumber = 1;
             List<int> numbers = new List<int>();
@@ -23,9 +25,7 @@
                 numbers.Add(i);
             }
 
-            string result = string.Join($", ", numbers);
-            Console.WriteLine($"Числа: {result}");  // Числа: -2, -1, 0, 1, 2
-            Console.WriteLine($"Сумма квадратов: {squaresSum}");  // Сумма квадратов: 10
+            return numbers;
         }
     }
 }
