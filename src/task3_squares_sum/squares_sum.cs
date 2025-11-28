@@ -4,7 +4,7 @@
     {
         public static List<int> GetSquaresSum(int a)
         {
-            if (a < 0)
+            if (a <= 0)
                 throw new ArgumentException("a должно быть неотрицательным");
 
             int squaresSum = 0;
@@ -12,9 +12,9 @@
             List<int> numbers = new List<int>();
 
             // Вычислить сумму квадратов ВСЕХ целых чисел, пока сумма < a
-            while (squaresSum + 2 * (currentNumber * currentNumber) < a)
+            while (squaresSum + (currentNumber * currentNumber) < a)
             {
-                squaresSum += 2 * (currentNumber * currentNumber);
+                squaresSum += (currentNumber * currentNumber);
                 currentNumber++;
             }
 
